@@ -8,7 +8,8 @@ jobs:
     container:
       image: composer:latest
       volumes:
-        - ${{ github.workspace }}:/app
+        #- ${{ github.workspace }}:/app
+         - /var/run/docker.sock:/var/run/docker.sock
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
